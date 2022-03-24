@@ -121,7 +121,7 @@
 			var mail=form1.email.value;
 			var Sex=form1.sex;
 			var lang=form1.language; 
-			//var a=true;
+			var a=true;
 			var b=true;
 			var c=true;
 			var d=true;
@@ -130,7 +130,10 @@
 			var g=true;
 			var h=true;
 
-			
+			if ( user=="" || pwd=="" || nam=="" || country=="" || mail=="" || sex=="" || lang==""){
+         alert ("there are empty fields, please fill them ");
+         a=false;
+         }
 
 			if(validateId(user)==false){
 				alert ("User ID field required and must be of length 5 to 12 ");
@@ -167,7 +170,7 @@
 				h=false;
 			}
 
-			if (b==true && c==true && d==true && e==true && f==true && g==true && h==true){
+			if (a==true && b==true && c==true && d==true && e==true && f==true && g==true && h==true){
             returnvalue=true;
              }
              return returnvalue;
@@ -184,17 +187,17 @@
 		<table align="center"  style="border:0; border-spacing:10px; font-size:15px;">
 			<tr>
 				<td>User Id :</td>
-				<td><input type="text" name="userid" size="10" onClick="alert('Required')" required></td>
+				<td><input type="text" name="userid" size="10" onClick="alert('Required')" ></td>
 			</tr>
 
 			<tr>
 				<td>Password :</td>
-				<td><input type="text" name="password" size="10" onClick="alert('Required')" required></td>
+				<td><input type="text" name="password" size="10" onClick="alert('Required')" ></td>
 			</tr>
 			
 			<tr>
 				<td>Name :</td>
-				<td><input type="text" name="name" size="50" onClick="alert('Required')" required></td>
+				<td><input type="text" name="name" size="50" onClick="alert('Required')" ></td>
 			</tr>
 			
 			<tr>
@@ -216,7 +219,7 @@
 
 			<tr>
 				<td>Email :</td>
-				<td><input type="text" name="email" size="50" required placeholder="abcd@gmail.com" onClick="alert('Required')" required></td>
+				<td><input type="text" name="email" size="50"  placeholder="abcd@gmail.com" onClick="alert('Required')" ></td>
 			</tr>
 
 			<tr>
