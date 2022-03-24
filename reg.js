@@ -100,7 +100,7 @@ function validateId(user) {
 			
 		
 
-		function validateform(form1){
+		function validateform(){
 			
 			var user=form1.userid.value;
 			var paw=form1.password.value;
